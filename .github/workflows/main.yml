@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  hello-world-job:
+  explore-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: "Hello World Step"
-        run: echo "Hello, World!"
+      - name: "Checkout Repo"
+        uses: actions/checkout@v6.1.0
+      - name: "Where Am I?"
+        run: pwd
+      - name: "List all files"
+        run: ls -al
